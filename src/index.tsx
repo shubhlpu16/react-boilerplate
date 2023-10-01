@@ -4,8 +4,8 @@ import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import { ChakraProvider } from '@chakra-ui/react'
 import reportWebVitals from './reportWebVitals'
-import { theme } from './styles/theme'
-import './styles/globals.css'
+import { theme } from '@/styles/theme'
+import '@/styles/globals.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(

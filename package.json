@@ -34,10 +34,10 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
     "format:check": "prettier . --ignore-path .gitignore --check",
     "format:fix": "prettier . --ignore-path .gitignore --write",
     "prettier": "prettier . --ignore-path .gitignore",
@@ -62,6 +62,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
