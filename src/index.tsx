@@ -2,18 +2,22 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
+import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 import reportWebVitals from './reportWebVitals'
 import { theme } from '@/styles/theme'
 import '@/styles/globals.css'
+import { store } from '@/store'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <Router>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </Provider>
   </Router>
 )
 
