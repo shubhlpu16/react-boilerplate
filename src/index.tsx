@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 import reportWebVitals from './reportWebVitals'
 import { theme } from '@/styles/theme'
@@ -9,9 +10,11 @@ import '@/styles/globals.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <ChakraProvider theme={theme}>
-    <App />
-  </ChakraProvider>
+  <Router>
+    <ChakraProvider theme={theme}>
+      <App />
+    </ChakraProvider>
+  </Router>
 )
 
 // If you want your app to work offline and load faster, you can change
