@@ -13,7 +13,7 @@ import {
 export default function Counter() {
   // The `state` arg is correctly typed as `RootState` already
   useEffect(() => {
-    dispatch(fetchCatalogue())
+    dispatch(fetchCatalogue() as any)
   }, [])
   const count = useAppSelector((state) => state.counter.value)
   const dispatch = useAppDispatch()
