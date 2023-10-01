@@ -29,7 +29,17 @@
     "format:check": "prettier . --ignore-path .gitignore --check",
     "format:fix": "prettier . --ignore-path .gitignore --write",
     "prettier": "prettier . --ignore-path .gitignore",
-    "lint": "eslint --ext .tsx,.ts ."
+    "lint": "eslint --ext .tsx,.ts .",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{json,md,css,scss,yml}": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +65,8 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3"
   }
 }
